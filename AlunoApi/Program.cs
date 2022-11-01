@@ -1,3 +1,5 @@
+using AlunoApi.Endpoints;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,4 +17,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapMethods(AlunoGet.Template, AlunoGet.Metodo, AlunoGet.Func);
 app.Run();//roda aplicação

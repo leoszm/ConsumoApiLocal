@@ -5,7 +5,7 @@ namespace AlunoApi.Repository
 {
     public class AlunoRepository
     {
-        public static List<Aluno> BancoDeDados { get; set; }
+        public static List<Aluno> BancoDeDados { get; set; } = new List<Aluno>();
         public void Carga()
         {
             Aluno aluno1 = new Aluno(1, "Raphael", "Matriculado", 12352);
